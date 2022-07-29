@@ -117,7 +117,7 @@ require_once 'connect/connect.php';
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         
 
-        <li class="nav-item mb-3 me-4">
+        <li class="nav-item mt-4 mb-3 me-4">
                         <form class="formleft" action="" method="get">
                             <div class="wrapper">
                                 <button class="btn-food" type="submit" name="searching" value="hardfood" >hardfood</button>
@@ -126,13 +126,13 @@ require_once 'connect/connect.php';
         </li>
 
         
-        <li class="nav-item mb-3 me-4">
+        <li class="nav-item mt-3  mb-3 me-4">
         <form class="formleft" action="" method="get">
                     <button class="btnNa green rounded-pill" type="submit" name="searching" id="nature "value="nature">nature </button>                       
                 </form>            
         </li>
 
-        <li class="nav-item mb-3 me-4">
+        <li class="nav-item mt-3  mb-3 me-4">
                 <form class="formleft" action="" method="get">
                     <div class="box">
                         <button class="but-ls" type="submit" name="searching" value="lifestyle" >lifestyle</button>
@@ -140,13 +140,13 @@ require_once 'connect/connect.php';
                 </form>          
         </li>
 
-        <li class="nav-item mb-3 me-4">
+        <li class="nav-item mt-3  mb-3 me-4">
                 <form class="formleft" action="" method="get">
                             <button class="btn btn-1" type="submit" name="searching" value="anime" >anime</button>
                         </form>          
         </li>
 
-        <li class="nav-item mb-3 me-4">
+        <li class="nav-item mt-3  mb-3 me-4">
         <form class="formleft" action="" method="get">
                             <button class="but-nft  rainbow rainbow-1 " type="submit" name="searching" value="nft" >NFT</button>
                         </form>           
@@ -158,8 +158,9 @@ require_once 'connect/connect.php';
         </li>
         
       </ul>
-
-      <a href="allImageMembre.php"><button type="submit" class="rounded-pill p-2"> Reset </button></a>
+        
+      <a href="allImageMembre.php" class="me-3"><button type="submit" class="rounded-pill p-2 "> Reset </button></a>
+      
       <form class="d-flex" role="search">
         <input class="form-control me-2" name="searching" type="search" placeholder="rechercher par nom" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Rechercher</button>
@@ -175,7 +176,7 @@ require_once 'connect/connect.php';
 
 
 
-    <h1>Le Hall of Pic</h1>
+    <h2 class="titleHofP ms-1" >Le Hall of Pic</h2>
 
         <!-- condition barSearch -->
         <div class="containerDur">
@@ -195,7 +196,9 @@ require_once 'connect/connect.php';
                                 <img class='img-cadre'  src ='img/cadregold.png'> 
                             
                             
-                            <div class='interieur'>     
+                            <div class='interieur' style='background-image: url(".$dataImg['url_image']. ");'> 
+                            
+                            
                             
                                 <img style='max-width:100% ; max-height:100%;  ' src = " .$dataImg['url_image']. "> 
                             </div>

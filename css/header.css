@@ -224,13 +224,13 @@ a:link{
     flex-direction: column;
     align-items: center;
     padding-right:1% ;
-    margin-top: -190%;
+    margin-top: -290%;
     /* margin-right: 400px; */
     transition: 1s;
     /* margin-left:  65%; */
     font-size: 30px;
     font-weight: 200;
-    background-color:black ;
+    background-color:rgb(0, 0, 0) ;
      width: 150px;
      min-width: 150px; 
      /* margin-bottom: 120%; */

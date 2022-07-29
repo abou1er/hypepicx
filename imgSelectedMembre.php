@@ -140,7 +140,7 @@ require_once 'connect/connect.php';
 </header>    
 
 
- <body>
+ <body class="container-fluid">
 
  
 
@@ -150,19 +150,19 @@ require_once 'connect/connect.php';
 <div class="container">
 
 <div class="parent-cadre">
+    
     <img class="img-cadre"src="img/cadregold.png" alt="">
 
    <div style='background-image: url(<?php  echo('"'. $resultat['url_image'] .'"')?>) ; ' class='interieur'>
-    <?php 
-    echo('<img  src = "' . $resultat['url_image'] . '"/> ');
-    ?>
 
 
-    
-  
+            <?php 
+            echo('<img  src = "' . $resultat['url_image'] . '"; class="firstImg"/>');
+            ?>
   
     </div>
 
+    
 
     <div class="infocarte">
         <div class="titre"> <?php echo $resultat["title_image"];  ?> </div>
@@ -183,7 +183,7 @@ require_once 'connect/connect.php';
 <!-- ------------------------PARTIE COMMENTAIRE---------------------------------- -->
 
 
-
+<div class="container-fluid"></div>
     <div class="contain-right">
 
         <div class="contain-comment">
@@ -198,7 +198,7 @@ require_once 'connect/connect.php';
             <div class="ajout-com">
 
                 <form action="" method="post">
-                    <textarea placeholder="Ajouter un commentaire" name="le_commentaire" id="" cols="60" rows="2"></textarea>
+                    <textarea placeholder="Ajouter un commentaire" name="le_commentaire" id=""  cols="45" rows="5"></textarea>
   
                     <input type="submit" value="envoyer" name="envoi">
                 </form>

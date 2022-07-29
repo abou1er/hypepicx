@@ -33,7 +33,7 @@ function menu(){
     // spanbottom.style.transform = "translateY(-25px) rotate(-45deg)";
 
     burger.className= "burger active ";
-    menuresponsive.style.marginTop = "-20%"
+    menuresponsive.style.marginTop = "-12%"
     menuresponsive.style.marginBottom = "0%"
     menuresponsive.style.opacity = "1"
     // menuresponsive.style.position = "absolute"
@@ -48,7 +48,7 @@ function menu(){
         spanbottom.style.transform = "translateY(0) rotate(0)";
         spanmiddle.style.opacity = "1";
         burger.className= "burger";
-        menuresponsive.style.marginTop = "-900px"
+        menuresponsive.style.marginTop = "-2500px"
         
         menuresponsive.style.marginBottom = "100px"
         menuresponsive.style.opacity = "0"

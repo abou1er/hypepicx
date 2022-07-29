@@ -7,6 +7,8 @@ body{
     /* background-position: center; */
     /* background-size: cover; */
     font-family: 'Kreon', serif !important;
+    padding: 0;
+    margin: 0;
     }
 
 .triRecherche{
@@ -121,8 +123,6 @@ body{
      */background-position: center; 
      background-size: cover;  
    
-   
-
    
      transition: transform 1.5s;
 
@@ -537,6 +537,7 @@ background-position: center;
     display: flex;
     justify-content: flex-start;
     text-align: center;
+    padding-bottom: 50px;
   }
   .txt{
     /* border: 2px solid palevioletred; */
@@ -605,6 +606,8 @@ background-position: center;
         .contain-right{
             border: 3px solid rgb(205, 50, 192);
             max-width: 100%;   
+            /* padding-left: 2%; */
+            /* margin-left: 3%; */
         
         }
 
@@ -618,7 +621,7 @@ background-position: center;
             /* border: 4px solid rgb(175, 238, 178); */
             padding: 0 3% 0 3%;
             width: 100%;
-            border: 3px solid rgb(50, 205, 125);
+            /* border: 3px solid rgb(50, 205, 125); */
           }
           
           .conteneurFoot2{
@@ -753,6 +756,88 @@ background-position: center;
         }
   
 
+        @media screen and (max-width: 480px) {
+  
+
+          
+.parent-cadre{
+  /* border: 3px solid red; */
+  max-width: 550px;
+  height: auto;
+
+  margin-bottom: 8%;
+  
+  /* border: 3px solid rgb(83, 2, 83); */
+  border-radius: 1px 5% 5% 2%;
+
+  transition: transform 1.5s;
+  /* padding-left: 1%; */
+  
+
+}
+
+.parent-cadre img{
+  max-width: 100%;
+  max-height: 100%;
+
+ 
+}
+
+.img-cadre {
+  box-shadow: 8px 8px 7px 2px #000000;
+  /* border: 3px solid blue; */
+}
+
+/* .firstImg{
+
+  border: 3px solid red;
+} */
+
+.interieur{
+  
+  /* border: 3px solid yellowgreen; */
+  max-width: 71vw;
+  max-height:28vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* z-index: 6; */
+
+  position: relative;
+  left: 13%;
+  /* bottom: 70px; */
+  margin-top: -70%;
+  
+
+
+  
+
+/***** background****** */
+  /* background-image: url(img/pdiddy_jay_ect.png);
+   */background-position: center; 
+   background-size: cover;  
+ 
+ 
+   transition: transform 1.5s;
+
+}
+     
+      
+          }
+    
+
+          @media screen and (max-width: 420px) {
+  
+            .interieur{
+  
+              /* border: 3px solid yellowgreen; */
+             
+              margin-top: -74%;
+              
+            }
+            
+          }
   /***FIN mediaquery barre recherche tri****/
   
 
