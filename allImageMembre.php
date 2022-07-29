@@ -6,12 +6,12 @@ if(!$_SESSION['id_user']){
 }
 require_once 'connect/connect.php';
    
-    $sortByLocation = $bdd->query('SELECT * FROM image ORDER BY id_image DESC');
+    $dataImage = $bdd->query('SELECT * FROM image ORDER BY id_image DESC');
 
 
     if (isset($_GET['searching']) AND !empty($_GET['searching'])) {
         $recherche = htmlspecialchars($_GET['searching']);
-        $sortByLocation = $bdd->query('SELECT * FROM image WHERE title_image LIKE "%'.$recherche.'%" OR category_image LIKE "%'.$recherche.'%"  ORDER BY id_image DESC');
+        $dataImage = $bdd->query('SELECT * FROM image WHERE title_image LIKE "%'.$recherche.'%" OR category_image LIKE "%'.$recherche.'%"  ORDER BY id_image DESC');
     }                                 //select dans la table trip la colonne levelTrip LIKE ce qui ressemblera à ce qui sera rentré dans l'input OR locationTrip ressempble à ce qui sera rentré
 
     //fin barre de recherche**********************************************
@@ -47,13 +47,13 @@ require_once 'connect/connect.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/allImage.css">
 
-   
-    <link rel="stylesheet" href="css/header.css">
     <title>Le Hall of Pic</title>
 
 </head>
@@ -74,14 +74,9 @@ require_once 'connect/connect.php';
 
         
         <div class="home">
-
            
             <div class="pseudo"><?php echo $_SESSION['pseudo'];  ?></div>
              <div class="profil"><img src="img/profil.png" alt=""> <?php echo('<br><a href="profilMembre.php?id='.$_SESSION['id_user'].'" >Voir mon profil</a> '); ?> </div> 
-
-             
-           
-            
 
         </div>
 
@@ -98,80 +93,83 @@ require_once 'connect/connect.php';
 
 
 
-    </div>
+</div>
 
     
 
     <div class="parentresponsive">
-    <div class="menuresponsive" id="menuresponsive">
-       
-        <?php echo('<br><a href="profilMembre.php?id='.$_SESSION['id_user'].'" >Profil</a> '); ?>
+            <div class="menuresponsive" id="menuresponsive">
+
+                <?php echo('<br><a class="nav-link active" href="profilMembre.php?id='.$_SESSION['id_user'].'" >Profil</a> '); ?>
 
 
-    </div>
-</div>    
+            </div>
+    </div>    
 
-    
-    
+<!-- bootNav 2-->
+<nav class="navbar navbar-expand-lg bg-light triRecherche">
+  <div class="container-fluid">
+  <a class="navbar-brand float-end">Trier par catégorie</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
 
+        <li class="nav-item mb-3 me-4">
+                        <form class="formleft" action="" method="get">
+                            <div class="wrapper">
+                                <button class="btn-food" type="submit" name="searching" value="hardfood" >hardfood</button>
+                            </div>
+                        </form>             
+        </li>
 
+        
+        <li class="nav-item mb-3 me-4">
+        <form class="formleft" action="" method="get">
+                    <button class="btnNa green rounded-pill" type="submit" name="searching" id="nature "value="nature">nature </button>                       
+                </form>            
+        </li>
 
+        <li class="nav-item mb-3 me-4">
+                <form class="formleft" action="" method="get">
+                    <div class="box">
+                        <button class="but-ls" type="submit" name="searching" value="lifestyle" >lifestyle</button>
+                    </div>
+                </form>          
+        </li>
 
+        <li class="nav-item mb-3 me-4">
+                <form class="formleft" action="" method="get">
+                            <button class="btn btn-1" type="submit" name="searching" value="anime" >anime</button>
+                        </form>          
+        </li>
 
-    <div class="triRecherche">
-
-        <div class="tri">
-
-                <div class="searchByLevel">   <!-- barre de recherche par niveau -->
-                   Trier par catégorie
-                </div>  
-
-                <div class="formLevel">    
-                    <form class="formleft" action="" method="get">
-                        
-                        <button class="btnNa green" type="submit" name="searching" id="nature "value="nature" >nature</button>
-                        
-                        
-                        <div class="wrapper">
-                        <button class="btn-food" type="submit" name="searching" value="hardfood" >hardfood</button>
-                        </div>
-
-
-                        <div class="box">
-                            <button class="but-ls" type="submit" name="searching" value="lifestyle" >lifestyle</button>
-                        </div>
-                        
-                        <button class="btn btn-1" type="submit" name="searching" value="anime" >anime</button>
-                        
-
-                      
+        <li class="nav-item mb-3 me-4">
+        <form class="formleft" action="" method="get">
                             <button class="but-nft  rainbow rainbow-1 " type="submit" name="searching" value="nft" >NFT</button>
-                          
-                        
-                        <a href="allImageMembre.php"><button type="submit" >reset</button></a>
-                    </form>
-                </div>    
-        </div>            
+                        </form>           
+        </li>
 
+        <li class="nav-item dropdown">
+          <ul class="dropdown-menu"> 
+          </ul>
+        </li>
+        
+      </ul>
 
-        <div class="search">
+      <a href="allImageMembre.php"><button type="submit" class="rounded-pill p-2"> Reset </button></a>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" name="searching" type="search" placeholder="rechercher par nom" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Rechercher</button>
+      </form>
 
-            <div class="searchByName">
-            Rechercher par nom  
-            </div>
-
-            <!-- barre de recherche par région-->
-            <div class="formu">
-                 <form action="" method="get">
-                    <input type="search" name="searching" placeholder="rechercher par nom">
-                    <input type="submit" value="Rechercher"> <!-- soumettra en GET la valeur rentrée dans l'input -->
-                    <a href="allImageMembre.php"><button type="submit" >Reset</button></a>   
-                </form>
-            </div>
-
-        </div>    
-
-    </div>           
+      
+    </div>
+  </div>
+</nav>
+<!-- fin bootnav 2 -->
 
 
 
@@ -180,89 +178,89 @@ require_once 'connect/connect.php';
     <h1>Le Hall of Pic</h1>
 
         <!-- condition barSearch -->
-        <div class="container">
- <?php 
-
-         if($sortByLocation->rowCount() > 0){
-             while($loca = $sortByLocation->fetch()){
-                 // echo ma carte
-echo  
-    "<a class='lien' href='imgSelectedMembre.php?id_image=".$loca["id_image"]."'> 
-            
+        <div class="containerDur">
 
 
-        <div class='parent-cadre' style>
-            <img class='img-cadre'  src ='img/cadregold.png'> 
+             <?php 
 
-         
-            
-                <div class='interieur'>     
-                
-                    <img style='max-width:100% ; max-height:100%;  ' src = " .$loca['url_image']. "> 
-                </div>
-                
+                         if($dataImage->rowCount() > 0){
+                             while($dataImg = $dataImage->fetch()){
+                                 // echo ma carte
+                echo  
+                    "<a class='lien' href='imgSelectedMembre.php?id_image=".$dataImg["id_image"]."'> 
+                            
+                            
+                            
+                        <div class='parent-cadre' style>
+                                <img class='img-cadre'  src ='img/cadregold.png'> 
+                            
+                            
+                            <div class='interieur'>     
+                            
+                                <img style='max-width:100% ; max-height:100%;  ' src = " .$dataImg['url_image']. "> 
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            <div class='infocarte'>
+                            
+                                    <div class='titre'>
 
-                <div class='infocarte'>
+                                        <span>". $dataImg["title_image"] ."</span>
+                            
+                                    </div>
+                            
+                            
+                                    <div class=datepostimg'>
+                            
+                                        ". $dataImg["date_post"] ."
 
-
-
-
-                        <div class='titre'>
-
-                            <span>". $loca["title_image"] ."</span>
+                            
+                                    </div>
+                            
+                            </div>
 
                         </div>
+                            
+                    </a>";
+                            
+                // fin carte
+                            
+                                //  var_dump($dataImg);
+                             }
 
+                        }else{
+                            ?><p>aucune image trouvé</p>
+                            <br>
+                            <br>
+                            <a href="allImageMembre.php"><button type="submit" >reset</button></a>
+                        
+                            <?php
+                        } 
 
-                        <div class=datepostimg'>
-                
-                            ". $loca["date_post"] ."
-
-                
-                        </div>
-
-                </div>
                     
-        </div>
-             
-    </a>";
+                    
+                        ?>
 
-// fin carte
-
-                //  var_dump($sortByLevel);
-             }
+                        </div>
+                        <!-- finCondition -->
+                    
+                    <br>
+                    <br>
                 
-        }else{
-            ?><p>aucune image trouvé</p>
-            <br>
-            <br>
-            <a href="allImageMembre.php"><button type="submit" >reset</button></a>
-        
-            <?php
-        } 
-        
-
-
-        ?>
-        
-        </div>
-        <!-- finCondition -->
-
-    <br>
-    <br>
-
-    </body>    
-
-    <?php  include_once 'footer.php';?>
-
-<script src="apparitionAuDefilement.js"></script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- <script src="satisfaction.js"></script> -->
-<script src="script.js"></script>
-<script src="burger.js"></script>
+                </body>    
+                
+            <?php  include_once 'footer.php';?>
+                
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+                
+            <script src="apparitionAuDefilement.js"></script>
+            <!-- <script src="satisfaction.js"></script> -->
+            <script src="script.js"></script>
+            <script src="burger.js"></script>
     
-
+        </div>                 
 
 </html>

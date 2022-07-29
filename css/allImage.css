@@ -167,8 +167,10 @@ body{
     justify-content: center;
 }
 
+
 .containerDur{
     /* border: 3px solid #0000ff; */
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -680,6 +682,27 @@ button{
       
          }
   
+
+
+         
+  @media screen and (max-width: 731px) {
+  
+    .containerDur{
+      /* border: 3px solid #0000ff; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-between;
+      flex-direction: column;
+      /* border: yellowgreen solid 5px; */
+  
+      padding-left: 2%;
+      padding-right: 3%;
+      flex-wrap: wrap;
+  }
+
+  }
+
 
      @media screen and (max-width: 500px) {
   
