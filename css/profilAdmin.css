@@ -1,0 +1,49 @@
+
+
+@import 'https://fonts.googleapis.com/css?family=Kreon:300,700';
+
+
+
+.body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* //page profil */
+.infoProfil{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  justify-content: space-between;
+  /* border: solid red 2px; */
+  padding-right: 10%;
+  padding-left: 10%;
+  
+
+}
+
+.central{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  /* border: solid rgb(176, 72, 218) 2px; */
+
+}
+
+.infoProfil div{
+  border: 4px solid #070707;
+  margin-top: 3%;
+
+}
+
+
+.editPro{
+      border: 4px solid #8ebbf5;
+
+}
+
+input{
+  border-radius: 25px;
+}

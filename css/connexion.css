@@ -1,0 +1,154 @@
+#parent{
+    height: 95vh;
+    width: 95vw;
+    /* background: teal; */
+    /* margin: auto; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 160%;
+    font-weight: bold;
+    
+
+}
+/* .parent{margin: auto;} */
+a{
+    color: black;
+}
+.slogan{
+color: red;
+font-weight: bold;
+font-size: 3vw;
+display: flex;
+align-items: center;
+justify-content: center;
+text-shadow: 4px 3px #f5adad;
+margin-bottom: 50px;
+}
+
+.absolute{
+    background-color: rgb(170, 169, 169);
+     /* height: 80px; */
+    /* width: 40vw; 
+    height: 40vh; */
+
+    width: 39%; 
+    height: 65%;
+
+    position: absolute; /*fait sortir l'élément du flow ET se postitionne
+     par rapport au premier élément parent qui a une position RELATIVE. parent toujours en relative */
+    
+     /* left: 25%; 
+    right: 25%; */
+    z-index: 5;
+    opacity: 0.7;
+
+    /* border-radius: 45vh; */
+    border-radius: 25px;
+
+    border: solid 3px black;
+
+    overflow: hidden;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 350px;
+
+
+
+}
+
+.connexAd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* .absolute div{
+    position: relative;
+} */
+
+
+.ligne{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 29vw; 
+    /* border: 3px solid red; */
+    padding-left: 25%;
+    margin-bottom: 3%;
+}
+
+.mini-logo{
+    width: 50px;
+
+    max-height: 100%;
+    max-width: 100%;
+
+    margin-right: 3%;
+    border: 3px solid cyan;
+}
+
+
+/* p{
+    border: tomato 3px solid;
+    
+} */
+
+ #ring{
+     max-height: 100%;
+     max-width: 100%;
+     position: absolute;
+     z-index: 4;
+
+
+
+   
+}
+
+.titrepage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message{
+    font-weight: bold;
+}
+@media screen and (max-width: 815px) {
+    #parent{
+        
+    margin-top: -5%;
+  
+
+     }
+
+     .slogan{
+        
+        margin-top: 50px;
+        font-size: 4vw;
+        }
+      
+        
+    .ligne{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 29vw; 
+    /* border: 3px solid red; */
+    padding-left: 8%;
+    margin-bottom: 3%;
+    }
+
+    /* .parentNomDuSite{
+        width: 100%;
+    } */
+
+
+
+}
+

@@ -1,0 +1,368 @@
+
+@import 'https://fonts.googleapis.com/css?family=Kreon:300,700';
+@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
+
+
+.parent{
+    display: flex;
+    justify-content: space-between;
+    /* border: 4px solid royalblue; */
+    background-image: url(img/backgroundbuvar.jpeg);
+     background-position: center; 
+     background-size: cover; 
+    align-items: center;
+    height: 20em;
+    padding-bottom: .5%;
+    /* padding-top: .5%; */
+    margin-bottom: 5%;
+    
+}
+
+.logo{
+    /* border: 4px dashed goldenrod; */
+    width: 10%;
+    min-width:110px;
+
+
+    
+}
+.logo img{
+    width: 100%;
+    min-width:105px;
+    filter: invert(1);
+
+    animation-duration: 1.9s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: none;
+}
+
+
+
+
+  @keyframes clignoter {
+    0%   { opacity:1; }
+    40%   {opacity:0; }
+    100% { opacity:1; }
+  } 
+
+
+
+
+.parentNomDuSite{
+  padding-top: 0px;
+  margin-top: 0px;
+  width: 60%;
+  background-image: url("img/logo-site.jpg"); 
+  background-position: center; 
+  background-size: cover; 
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: red 3px solid; */
+  
+
+}
+
+.nomdusite{
+  
+  /* border-bottom: 5px solid blue; */
+  background-color: rgba(117, 190, 218, 0.5);
+}
+
+.retourHall{
+  display: flex;
+  width: 100%;
+}
+
+
+.profil{
+  display: flex;
+  align-items: flex-end;
+  border: 4px dashed rgb(13, 15, 15);
+
+}
+
+
+.home{
+    display: flex;
+    /* border: 4px dashed aqua; */
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+    width: 25%;
+    font-size: 150%;
+    /* color: white; */
+    font-family: 'Kreon', serif !important;
+    background-color: rgba(117, 190, 218, 0.5);
+    
+
+}
+.home a {
+  color: rgb(124, 115, 248);
+  font-size: 2vw;
+}
+.home img{
+    width: 60px;
+    /* filter: invert(1); */
+}
+
+.retourHall{
+  /* border: 4px dashed red; */
+  display: flex;
+  height: 8%;
+}
+.retourHall img{
+  width: 60px;
+  margin-right: 5px;
+}
+
+.profil img{
+  width: 60px;
+  margin-right: 2%;
+}
+
+.acceuil img{
+  width: 60px;
+  /* margin-right: 2%; */
+}
+
+
+
+.ecart{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 1px;
+  background-color: red;
+}
+
+
+
+
+
+  .reveal{
+    opacity: 0;
+    transform: translateY((-30px));
+  }
+
+
+.reveal-visible{
+  opacity: 1;
+  transform: translateY(0);
+  transition: 7.9s;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+
+
+.menuresponsive{
+  display: none;
+  /* justify-content: flex-end; */
+  margin-right: -55%;
+  position: fixed;
+  overflow: unset;
+
+
+}
+
+
+ .aDel{
+ margin-top: 9%;
+ border: 7px solid rgb(211, 247, 235);
+ width: 30%;
+ font-weight: bold;
+
+} 
+
+.delete{
+  margin-top: 8%;
+}
+
+@media screen and (max-width: 970px) {
+
+  .burger{
+    border: 7px solid rgb(211, 247, 235);
+    width: 100px;
+    height: 100px;
+    margin-right: 1%;
+    margin-top: 8%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: rgb(134, 103, 103); */
+    background-color: rgb(5, 5, 5);
+
+}
+
+.burger span{
+    /* width: 80%;
+    height: 15px; */
+    width: 40px;
+    height: 5px;
+    background: rgb(211, 247, 235);
+    margin-top: 6%;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.parentresponsive{
+  /* border: solid red 2px; */
+  width: 44%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menuresponsive{
+  border: cadetblue solid 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right:1% ;
+    margin-top: -190%;
+    /* margin-right: 400px; */
+    transition: 1s;
+    /* margin-left:  65%; */
+    font-size: 30px;
+    font-weight: 200;
+    background-color:black ;
+     width: 150px;
+     min-width: 150px; 
+     /* margin-bottom: 120%; */
+     height: 450px; 
+     justify-content: center;
+     position: absolute;
+     opacity: 1;
+     margin-left: 1%;
+     z-index: 8;
+     
+     /* padding:1% ; */
+     
+}
+.menuresponsive a{
+  /* display: flex; */
+    text-decoration: none; 
+    color: white;
+    /* padding:1% ; */
+    /* margin-top: 15%; */
+    font-family: 'Chicle', cursive;
+    font-size: 30px;
+    font-weight: 500;
+    border-top: cadetblue solid 2px;
+    border-bottom: cadetblue solid 2px;
+    /* font-family: 'Covered By Your Grace', cursive; */
+}
+.menuresponsive *{
+  
+    border-top: cadetblue solid 2px;
+    border-bottom: cadetblue solid 2px;
+    margin-top: 10px;
+    /* font-family: 'Covered By Your Grace', cursive; */
+}
+
+
+
+
+
+
+  .home{
+    
+display: none;
+  }
+
+  .marquee-rtl{
+    display: none;
+  }
+  
+  .grandconteneur{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    /* border: solid 5px blue; */
+    
+  }
+
+  .conteneur1{
+    display: flex;
+    justify-content: space-between;
+    /* border: brown 3px solid; */
+    flex-direction: row-reverse;
+    width: 70%;
+    height: 100px;
+    margin-bottom: 3%;
+    /* margin-left: 15%; */
+    margin-right: 15%;
+    /* border: blue solid 2px; */
+    padding-right: 14%;
+
+    
+  }
+
+
+  .conteneur1 img{
+    padding: 3%;
+    margin-right: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    /* border: red solid 2px; */
+    /* box-shadow:none; */
+  
+  
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  
+    
+  }
+
+  .conteneur1:hover img{
+
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+
+  
+
+
+  .conteneur2 {
+    margin-top: 15%;
+    margin-right: 10%;
+    
+  }
+
+  .conteneur2 img{
+    width: 160%;
+  }
+  
+
+
+}
+
+
+
+@media screen and (max-width: 650px) {
+.logo{display: none;}
+.parentNomDuSite{
+  /* width: 75%; */
+
+  width: 100%;
+}
+.burger span{
+  width: 40px;
+  height: 5px;
+  background: rgb(211, 247, 235);
+  /* margin-top: 6%; */
+  border-radius: 10px;
+  transition: 1s;
+}
+}
