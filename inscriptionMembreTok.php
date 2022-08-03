@@ -125,6 +125,8 @@ require_once 'connect/connect.php';
     
     <link rel="stylesheet" href="css/connexion.css">
 
+    <link rel="stylesheet" href="css/footer.css">
+
    
 </head>
 

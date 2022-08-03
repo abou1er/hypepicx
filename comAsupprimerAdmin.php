@@ -36,6 +36,7 @@ if(isset($_POST['envoi'])){
     <title>Supprimer un commentaires</title>
     <link rel="stylesheet" href="css/allImage.css">
      
+    <link rel="stylesheet" href="css/footer.css">
      <link rel="stylesheet" href="css/header.css">
   
 

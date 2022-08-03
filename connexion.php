@@ -138,7 +138,7 @@ require_once 'connect/connect.php';
 			<form  action="" method="post">
 			  	<div class="mb-3">
 			  	  <label for="exampleInputEmail1" class="form-label">Adresse e-mail</label>
-			  	  <input type="email" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp" 		placeholder="exemple@outmail.com" 		name="email">
+			  	  <input type="email" class="form-control rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp" 		placeholder="vincent@v.v" 		name="email">
 					
 			  	</div>
 					
@@ -159,12 +159,6 @@ require_once 'connect/connect.php';
 			<a href="src/index.php">Mot de passe oublié ?</a>
 		</div>
 		
-				
-	
-
-
-
-
 
 
 	</div>

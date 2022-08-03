@@ -9,12 +9,12 @@ require_once 'connect/connect.php';
  
 
     //query bar search by name // barre de recherche par nom***********************************
-    $sortByLocation = $bdd->query('SELECT * FROM image ORDER BY id_image DESC');
+    $dataImage = $bdd->query('SELECT * FROM image ORDER BY id_image DESC');
 
 
     if (isset($_GET['searching']) AND !empty($_GET['searching'])) {
         $recherche = htmlspecialchars($_GET['searching']);
-        $sortByLocation = $bdd->query('SELECT * FROM image WHERE title_image LIKE "%'.$recherche.'%" OR category_image LIKE "%'.$recherche.'%"  ORDER BY id_image DESC');
+        $dataImage = $bdd->query('SELECT * FROM image WHERE title_image LIKE "%'.$recherche.'%" OR category_image LIKE "%'.$recherche.'%"  ORDER BY id_image DESC');
     }                                 
     //fin barre de recherche**********************************************
 
@@ -40,8 +40,13 @@ require_once 'connect/connect.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/allImage.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/footer.css">
+
+    <link rel="stylesheet" href="css/allImage.css">
     <link rel="stylesheet" href="css/allImage2.css">
 
     <link rel="stylesheet" href="css/header.css">
@@ -102,125 +107,31 @@ require_once 'connect/connect.php';
 </div>    
 
     
-    
 
-
-
-
-
-    <div class="triRecherche">
-
-        <div class="tri">
-
-                <div class="searchByLevel">   <!-- search bar by category // barre de recherche par catégorie -->
-                   Trier par catégorie
-                </div>  
-
-                <div class="formLevel">    
-                    <form class="formleft" action="" method="get">
-                        
-                        <button class="btnNa green" type="submit" name="searching" id="nature "value="nature" >nature</button>
-                        
-                        
-                        <div class="wrapper">
-                        <button class="btn-food" type="submit" name="searching" value="hardfood" >hardfood</button>
-                        </div>
-
-
-                        <div class="box">
-                            <button class="but-ls" type="submit" name="searching" value="lifestyle" >lifestyle</button>
-                        </div>
-                        
-                        <button class="btn btn-1" type="submit" name="searching" value="anime" >anime</button>
-                        
-
-                      
-                            <button class="but-nft  rainbow rainbow-1 " type="submit" name="searching" value="nft" >NFT</button>
-                          
-                        
-                        <a href="allImage.php"><button type="submit" >reset</button></a>
-                    </form>
-                </div>    
-        </div>            
-
-
-        <div class="search">
-
-            <div class="searchByName">
-            Rechercher par nom  
-            </div>
-
-            <!--search bar by name // barre de recherche par nom -->
-            <div class="formu">
-                 <form action="" method="get">
-                    <input type="search" name="searching" placeholder="rechercher par nom">
-                    <input type="submit" value="Rechercher"> <!-- will submit in GET the value entered in the input //  soumettra en GET la valeur rentrée dans l'input -->
-                    <a href="allImage.php"><button type="submit" >Reset</button></a>   
-                </form>
-            </div>
-
-        </div>    
-
-    </div>           
-
-
+<!-- SEARCHBAR -->
+<?php 
+require_once 'searchbar.php';
+?>
+<!-- FIN SEARCHBAR -->
 
 
 
     <h1>Le Hall of Pic</h1>
 
-        <!-- condition barSearch -->
-        <div class="container">
+        <!-- all cards -->
+        <div class="containerDur">
  <?php 
 
-         if($sortByLocation->rowCount() > 0){
-             while($loca = $sortByLocation->fetch()){
-                 // echo ma carte
-echo  //       "<a class='lien' href='tripSelected.php?idTrip=".$toto["idTrip"]."'>  va ouvrir la page en y rajouant l'id correspondant au lien sur lequel j'ai cliqué. (si envie possiblité de mettre d'autre info ."&locationTrip=".$toto["locationTrip"]."&nameTrip=".$toto["nameTrip"]."&levelTrip=".$toto["levelTrip"]."')
+if($dataImage->rowCount() > 0){
+   
+                 // echo cards
 
-    "<a class='lien' href='imgSelected.php?id_image=".$loca["id_image"]."'> 
-            
-
-
-         <div class='parent-cadre' style>
-                <img class='img-cadre'  src ='img/cadregold.png'> 
-
-         
-            <div class='interieur'>     
-         
-                <img style='max-width:100% ; max-height:100%;  ' src = " .$loca['url_image']. "> 
-            </div>
-     
-
-            
-            
-
-            <div class='infocarte'>
-
-                    <div class='titre'>
+                 require_once 'allcards.php';
                 
-                        <span>". $loca["title_image"] ."</span>
+                // fin cards
 
-                    </div>
-
-
-                    <div class=datepostimg'>
-              
-                        ". $loca["date_post"] ."
-                
-            
-                    </div>
-
-            </div>
-                    
-        </div>
+                //  var_dump($dataImg);
              
-    </a>";
-
-// fin carte
-
-                //  var_dump($sortByLevel);
-             }
                 
         }else{
             ?><p>aucune image trouvé</p>
@@ -244,6 +155,8 @@ echo  //       "<a class='lien' href='tripSelected.php?idTrip=".$toto["idTrip"].
     </body>    
 
     <?php  include_once 'footer.php';?>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="apparitionAuDefilement.js"></script>
 <!-- <script src="satisfaction.js"></script> -->

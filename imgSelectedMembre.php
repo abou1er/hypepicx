@@ -71,7 +71,7 @@ require_once 'connect/connect.php';
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Pic <?php echo('' . $resultat['title_image'] .'');?></title>
      <!-- <link rel="stylesheet" href="imgSelected.css"> -->
-     <link rel="stylesheet" href="css/allImage.css">
+     <!-- <link rel="stylesheet" href="css/allImage.css"> -->
      
     <link rel="stylesheet" href="css/header.css">
      <link rel="stylesheet" href="css/img-selected.css">

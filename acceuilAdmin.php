@@ -40,6 +40,7 @@ if(isset($_SESSION['email'])){
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/allImage.css">
 
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/profilAdmin.css">
 </head>
 

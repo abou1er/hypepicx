@@ -1,6 +1,6 @@
 <?php 
 session_start(); // si le cookie $_SESSION['mdp'] n'est pas déclaré alors redirection
-if(!$_SESSION['admin']){
+if(!$_SESSION['role']){
     header('Location: index.php');
 
 }
@@ -22,6 +22,8 @@ require_once 'connect/connect.php';
     <link rel="stylesheet" href="css/allImage.css">     
     <link rel="stylesheet" href="css/header.css">
       <link rel="stylesheet" href="css/profilAdmin.css">
+
+      <link rel="stylesheet" href="css/footer.css">
 
 </head>
 

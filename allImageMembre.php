@@ -51,6 +51,7 @@ require_once 'connect/connect.php';
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/allImage.css">
 
@@ -106,71 +107,12 @@ require_once 'connect/connect.php';
             </div>
     </div>    
 
-<!-- bootNav 2-->
-<nav class="navbar navbar-expand-lg bg-light triRecherche">
-  <div class="container-fluid">
-  <a class="navbar-brand float-end">Trier par catégorie</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        
 
-        <li class="nav-item mt-4 mb-3 me-4">
-                        <form class="formleft" action="" method="get">
-                            <div class="wrapper">
-                                <button class="btn-food" type="submit" name="searching" value="hardfood" >hardfood</button>
-                            </div>
-                        </form>             
-        </li>
-
-        
-        <li class="nav-item mt-3  mb-3 me-4">
-        <form class="formleft" action="" method="get">
-                    <button class="btnNa green rounded-pill" type="submit" name="searching" id="nature "value="nature">nature </button>                       
-                </form>            
-        </li>
-
-        <li class="nav-item mt-3  mb-3 me-4">
-                <form class="formleft" action="" method="get">
-                    <div class="box">
-                        <button class="but-ls" type="submit" name="searching" value="lifestyle" >lifestyle</button>
-                    </div>
-                </form>          
-        </li>
-
-        <li class="nav-item mt-3  mb-3 me-4">
-                <form class="formleft" action="" method="get">
-                            <button class="btn btn-1" type="submit" name="searching" value="anime" >anime</button>
-                        </form>          
-        </li>
-
-        <li class="nav-item mt-3  mb-3 me-4">
-        <form class="formleft" action="" method="get">
-                            <button class="but-nft  rainbow rainbow-1 " type="submit" name="searching" value="nft" >NFT</button>
-                        </form>           
-        </li>
-
-        <li class="nav-item dropdown">
-          <ul class="dropdown-menu"> 
-          </ul>
-        </li>
-        
-      </ul>
-        
-      <a href="allImageMembre.php" class="me-3"><button type="submit" class="rounded-pill p-2 "> Reset </button></a>
-      
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" name="searching" type="search" placeholder="rechercher par nom" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Rechercher</button>
-      </form>
-
-      
-    </div>
-  </div>
-</nav>
-<!-- fin bootnav 2 -->
+<!-- SEARCHBAR -->
+<?php 
+require_once 'searchbar.php';
+?>
+<!-- FIN SEARCHBAR -->
 
 
 
@@ -178,64 +120,72 @@ require_once 'connect/connect.php';
 
     <h2 class="titleHofP ms-1" >Le Hall of Pic</h2>
 
-        <!-- condition barSearch -->
+        
+        <!-- all cards -->
         <div class="containerDur">
 
 
              <?php 
 
                          if($dataImage->rowCount() > 0){
-                             while($dataImg = $dataImage->fetch()){
-                                 // echo ma carte
-                echo  
-                    "<a class='lien' href='imgSelectedMembre.php?id_image=".$dataImg["id_image"]."'> 
                             
-                            
-                            
-                        <div class='parent-cadre' style>
-                                <img class='img-cadre'  src ='img/cadregold.png'> 
-                            
-                            
-                            <div class='interieur' style='background-image: url(".$dataImg['url_image']. ");'> 
-                            
-                            
-                            
-                                <img style='max-width:100% ; max-height:100%;  ' src = " .$dataImg['url_image']. "> 
+                 // echo cards
+
+                 
+ while($dataImg = $dataImage->fetch()){
+    echo  
+                        "<a class='lien' href='imgSelectedMembre.php?id_image=".$dataImg["id_image"]."'> 
+                                
+                                
+                                
+                            <div class='parent-cadre' style>
+                                    <img class='img-cadre'  src ='img/cadregold.png'> 
+                                
+                                
+                                <div class='interieurs' style='background-image: url(".$dataImg['url_image']. ");'> 
+                                
+                                
+                                
+                                    <img style='max-width:100% ; max-height:100%;  ' src = " .$dataImg['url_image']. "> 
+                                </div>
+                                
+                                
+                                
+                                
+                                
+                                <div class='infocarte'>
+                                
+                                        <div class='titre'>
+    
+                                            <span>". $dataImg["title_image"] ."</span>
+                                
+                                        </div>
+                                
+                                
+                                        <div class=datepostimg'>
+                                
+                                            ". $dataImg["date_post"] ."
+    
+                                
+                                        </div>
+                                
+                                </div>
+    
                             </div>
-                            
-                            
-                            
-                            
-                            
-                            <div class='infocarte'>
-                            
-                                    <div class='titre'>
-
-                                        <span>". $dataImg["title_image"] ."</span>
-                            
-                                    </div>
-                            
-                            
-                                    <div class=datepostimg'>
-                            
-                                        ". $dataImg["date_post"] ."
-
-                            
-                                    </div>
-                            
-                            </div>
-
-                        </div>
-                            
-                    </a>";
-                            
-                // fin carte
-                            
-                                //  var_dump($dataImg);
-                             }
+                                
+                        </a>";
+                                
+                    // fin carte
+                                
+                                        //  var_dump($sortByLevel);
+                 }
+ 
+                 //  var_dump($dataImg);
+              
 
                         }else{
                             ?><p>aucune image trouvé</p>
+                            
                             <br>
                             <br>
                             <a href="allImageMembre.php"><button type="submit" >reset</button></a>
@@ -248,7 +198,7 @@ require_once 'connect/connect.php';
                         ?>
 
                         </div>
-                        <!-- finCondition -->
+                <!-- fin all Cards -->
                     
                     <br>
                     <br>
