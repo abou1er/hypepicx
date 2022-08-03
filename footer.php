@@ -22,7 +22,7 @@
   
           <div class="reseau" style="margin-bottom:23px; ">
   
-              <div class="insta"> <a href="presention.php" target="_blank"><img src="img/php-computer-icons-web-development-logo-icon-5afcf35f39a6f6.8415244615265268152362.png" alt="instalogo" width="45em">
+              <div class="insta"> <a href="presentation.php" target="_blank"><img src="img/php-computer-icons-web-development-logo-icon-5afcf35f39a6f6.8415244615265268152362.png" alt="instalogo" width="45em">
               </div>
   
               <div class="txt">HYPEPIC</a></div>

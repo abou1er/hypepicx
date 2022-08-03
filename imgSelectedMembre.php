@@ -74,6 +74,7 @@ require_once 'connect/connect.php';
      <!-- <link rel="stylesheet" href="css/allImage.css"> -->
      
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
      <link rel="stylesheet" href="css/img-selected.css">
  </head>
  

@@ -77,7 +77,20 @@ require_once 'connect/connect.php';
         <div class="home">
            
             <div class="pseudo"><?php echo $_SESSION['pseudo'];  ?></div>
-             <div class="profil"><img src="img/profil.png" alt=""> <?php echo('<br><a href="profilMembre.php?id='.$_SESSION['id_user'].'" >Voir mon profil</a> '); ?> </div> 
+            <div class="profil"><img src="img/profil.png" alt=""> <?php echo('<br><a href="profilMembre.php?id='.$_SESSION['id_user'].'" >Voir mon profil</a> '); ?> </div> 
+            
+            
+    <div class="" style="margin-top:23px; ">
+    <div class="titreFoot"><h4>Présentation du projet </h4></div>
+  
+  <div class="reseau" >
+
+      <div class="insta"> <a href="presentation.php" target="_blank">
+      </div>
+
+      <div class="txt">HYPEPIC</a></div>
+  </div> 
+    </div>
 
         </div>
 

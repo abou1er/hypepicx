@@ -1,5 +1,14 @@
+@import 'https://fonts.googleapis.com/css?family=Kreon:300,700';
+@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
 
 /* footer */
+footer{
+  font-family: 'Kreon', serif !important;
+  text-decoration: none;
+}
+ a {
+  text-decoration: none;
+}
 
 .caroufoot{
     margin-top: 10%;

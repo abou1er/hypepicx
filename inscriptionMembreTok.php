@@ -63,7 +63,7 @@ require_once 'connect/connect.php';
 
                                             // lance l'éxécution de la requête
                                             $insertmbr->execute(array($pseudo,$mail,$mdp,$token_user));
-                                            $good  = "votre compte a bien été créé! "."<a href='connexionMembre.php' >Me connecter</a>";
+                                            $good  = "votre compte a bien été créé! "."<a href='connexion.php' >Me connecter</a>";
 
                                             //*header('Location: index.php');* //une fois la REQUETE éxécuté vers ou on veut être rédiriger
 
