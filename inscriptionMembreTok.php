@@ -63,7 +63,7 @@ require_once 'connect/connect.php';
 
                                             // lance l'éxécution de la requête
                                             $insertmbr->execute(array($pseudo,$mail,$mdp,$token_user));
-                                            $good  = "votre compte a bien été créé! "."<a href='connexion.php' >Me connecter</a>";
+                                            $good  = "<a href='connexion.php' > votre compte a bien été créé! "."Me connecter</a>";
 
                                             //*header('Location: index.php');* //une fois la REQUETE éxécuté vers ou on veut être rédiriger
 
@@ -141,7 +141,9 @@ require_once 'connect/connect.php';
 
 
         <div class="parentNomDuSite">
-            <div class="nomdusite render">hypEpic</div>
+            <a href="index.php">
+                <div class="nomdusite render">hypEpic</div>
+            </a>
         </div>
 
 
@@ -166,33 +168,41 @@ require_once 'connect/connect.php';
 
 <body>
 
-  <div class="titrepage">
+    <div class="titrepage">
       
-  <div class="letitre"><h2>Inscription</h2></div>
+        <div class="letitre"; style=" font-size:xx-large;"><h2>Inscription</h2></div>
 
 
-  <div class="message">
 
-<?php 
-    if(isset ($erreur)){
-        //si appariton de $erreur alors echo contenu $erreur
-        echo '<br><font color="red">'.$erreur .'</<font>';
+        <div class="message">
 
-        // var_dump ($_POST);
-    }
+            <?php 
+                if(isset ($erreur)){
+                    //si appariton de $erreur alors echo contenu $erreur
+                    echo '<br><font color="red">'.$erreur .'</<font>';
+                
+                    // var_dump ($_POST);
+                }
+            
+                if(isset ($good)){
+                 //si appariton de $erreur alors echo contenu $erreur
+                 echo '<br>
+                
+                 <div class="success"; style="color:green !important; font-size:xx-large;" >
+                
+                 '.$good .' 
+                
+                 </div>
+                 <br>';
+                
+                    // var_dump ($_POST);
+                }
+            
+            ?>
 
-    if(isset ($good)){
-     //si appariton de $erreur alors echo contenu $erreur
-     echo '<br><font color="green">'.$good .'</<font>';
+        </div>
 
-        // var_dump ($_POST);
-    }
-
-?>
-
-</div>
-
-</div> 
+    </div> 
 
 
        

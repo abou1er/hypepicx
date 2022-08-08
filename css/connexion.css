@@ -63,6 +63,15 @@ margin-bottom: 50px;
 
 }
 
+.success {
+    color: green !important;
+}
+
+.message{
+    border: solid 2px rgb(235, 204, 67);
+    
+}
+
 .connexAd{
     display: flex;
     align-items: center;
@@ -115,6 +124,8 @@ margin-bottom: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction:column;
+    margin-bottom: 15px ;
 }
 
 .message{

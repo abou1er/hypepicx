@@ -91,10 +91,11 @@ require_once 'connect/connect.php';
 
 
 
-        <div class="parentNomDuSite">
-            <div class="nomdusite render">hypEpic</div>
+	   <div class="parentNomDuSite">
+            <a href="index.php">
+                <div class="nomdusite render">hypEpic</div>
+            </a>
         </div>
-
 
         <div class="home">
         </div>

@@ -32,11 +32,11 @@
                 <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site internet&nbsp;<a href="https://www.hypepic.fr">https://www.hypepic.fr</a>&nbsp;l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi:
                 </p><p><strong>Propriétaire</strong> :   Abouu MLANAO   – 66 chemin du littoral 13015 MARSEILLE<br>
                               
-                <strong>Responsable publication</strong> : MLANAO – abou@hotlook.fr<br>
+                <strong>Responsable publication</strong> : MLANAO – abou.mlanao@gmail.com<br>
                 Le responsable publication est une personne physique ou une personne morale.<br>
-                <strong>Webmaster</strong> : Abou MLANAO – abou@hotlook.fr<br>
+                <strong>Webmaster</strong> : Abou MLANAO – abou.mlanao@gmail.com<br>
                 <strong>Hébergeur</strong> : ovh – 2 rue Kellermann 59100 Roubaix 1007<br>
-                <strong>Délégué à la protection des données</strong> : MLANAO – abou@hotlook.fr<br>
+                <strong>Délégué à la protection des données</strong> : MLANAO – abou.mlanao@gmail.com<br>
                 </p>
 
                 <p>Ce modèle de mentions légales est offert par <a target="_blank" href="https://fr.orson.io/1371/generateur-mentions-legales" alt="générateur de mentions légales gratuites ">Générateur de mentions légales pour site internet</a></p>

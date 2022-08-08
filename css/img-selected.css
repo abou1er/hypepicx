@@ -574,7 +574,7 @@ background-position: center;
 
      @media screen and (max-width: 920px) {
         .contain-right{
-            border: 3px solid rgb(205, 50, 192);
+            /* border: 3px solid rgb(205, 50, 192); */
             max-width: 100%;   
             /* padding-left: 2%; */
             /* margin-left: 3%; */
@@ -686,7 +686,7 @@ background-position: center;
 
           
             .parent-cadre{
-              border: 3px solid blue;
+              /* border: 3px solid blue; */
               max-width: 350px;
               height: auto;
             
@@ -709,7 +709,7 @@ background-position: center;
             
             .interieur{
               
-              border: 3px solid violet;
+              /* border: 3px solid violet; */
               max-width: 255px;
               max-height:205px;
             

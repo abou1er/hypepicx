@@ -194,6 +194,8 @@ if(isset($_POST['submitAnim'])){
 
     <link rel="stylesheet" href="css/borderform">   
 
+    <link rel="stylesheet" href="css/footer.css">
+
    
 </head>
 
@@ -209,7 +211,9 @@ if(isset($_POST['submitAnim'])){
 
 
         <div class="parentNomDuSite">
-            <div class="nomdusite render">hypEpic</div>
+            <a href="index.php">
+                <div class="nomdusite render">hypEpic</div>
+            </a>
         </div>
 
 
