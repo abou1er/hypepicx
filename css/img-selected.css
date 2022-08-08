@@ -528,8 +528,17 @@ background-position: center;
         border: 3px solid rgb(205, 50, 192);
         max-width: 35%;
         margin-left: 5%;
+        margin: 0 auto 35px auto;
     
     }
+
+    .parent-cadre{
+        
+        margin: 0 auto 35px auto;
+        
+      
+      }
+      
      }
 
 
@@ -554,7 +563,11 @@ background-position: center;
             border: 3px solid rgb(205, 50, 192);
             max-width: 90%;
             margin-left: 0;
+
+            margin: 0 auto 35px auto;
         }
+
+
          }
 
 
@@ -599,118 +612,21 @@ background-position: center;
         justify-content: space-between;
     }
 
-    /* .formLevel{
-        padding-right: 0px;
-    } */
-
  
      }
 
 
-     @media screen and (max-width: 590px) {
-  
-       
-      .render {
-        align-self: center;
-         transition:(all 0.3s ease);
-        
-         font-family: 'Kreon', serif !important;
-        font-weight: 700;
-        font-size: 5em;
-        color: #f5f5f5;
-       
-        margin-top: -20px;
-        text-shadow:
-        rgb(15, 15, 15) 0.006em 0.006em 0.007em,
-        #070707 1px 1px 1px,
-        #080808 1px 2px 1px,
-        #9c9c9c 1px 3px 1px,
-        #9c9c9c 1px 4px 1px,
-        #9c9c9c 1px 5px 1px,
-        #9c9c9c 1px 6px 1px,
-        #9c9c9c 1px 7px 1px,
-        #9c9c9c 1px 8px 1px,
-        #9c9c9c 1px 9px 1px,
-        #9c9c9c 1px 10px 1px,
-        #0e0d0d 1px 11px 1px,
-        #9c9c9c 1px 12px 1px,
-        rgba(16, 16, 16, 0.4) 1px 18px 6px,
-        rgba(16, 16, 16, 0.2) 1px 22px 10px,
-        rgba(16, 16, 16, 0.2) 1px 26px 35px,
-        rgba(16, 16, 16, 0.4) 1px 30px 65px,
-        white -0.15em -0.1em 100px;
-      
-      }
-      
-
-        .parent-cadre{
-            /* border: 3px solid red; */
-            max-width: 450px;
-            height: auto;
-          
-            margin-bottom: 8%;
-            
-        
-            border-radius: 1px 5% 5% 2%;
-        
-            transition: transform 1.5s;
-        
-        }
 
 
 
-        .interieur{
-    
-            /* border: 3px solid red; */
-            max-width: 338px;
-            height:44vh;
-        
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* z-index: 6; */
-        
-            position: relative;
-            left: 55px;
-            /* bottom: 70px; */
-            /* margin-top: -72%; */
-            /* margin-top: -2vh; */
-            
-            
-        
-        /***** background****** */
-            /* background-image: url(img/pdiddy_jay_ect.png);
-             */background-position: center; 
-             background-size: cover;  
-           
-           
-        
-           
-             transition: transform 1.5s;
-        
-        }
-    
-        }
-  
 
-     @media screen and (max-width: 500px) {
-  
-
-        .formLevel{
-           padding-right: 0px;
-       } 
-   
-    
-        }
-  
-
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 590px) {
   
 
           
 .parent-cadre{
-  /* border: 3px solid red; */
-  max-width: 550px;
+  border: 3px solid red;
+  max-width: 350px;
   height: auto;
 
   margin-bottom: 8%;
@@ -719,17 +635,17 @@ background-position: center;
   border-radius: 1px 5% 5% 2%;
 
   transition: transform 1.5s;
-  /* padding-left: 1%; */
+  margin: 0 auto 35px auto;
   
 
 }
 
-.parent-cadre img{
+/* .parent-cadre img{
   max-width: 100%;
   max-height: 100%;
 
  
-}
+} */
 
 .img-cadre {
   box-shadow: 8px 8px 7px 2px #000000;
@@ -743,9 +659,9 @@ background-position: center;
 
 .interieur{
   
-  /* border: 3px solid yellowgreen; */
-  max-width: 71vw;
-  max-height:28vh;
+  border: 3px solid yellowgreen;
+  max-width: 255px;
+  max-height:205px;
 
   display: flex;
   align-items: center;
@@ -755,7 +671,7 @@ background-position: center;
   position: relative;
   left: 13%;
   /* bottom: 70px; */
-  margin-top: -33vh;
+  margin-top: -74%;
   
 
 
@@ -773,6 +689,87 @@ background-position: center;
      
       
           }
+
+
+
+
+
+          @media screen and (max-width: 374px) {
+  
+
+          
+            .parent-cadre{
+              border: 3px solid blue;
+              max-width: 350px;
+              height: auto;
+            
+              margin-bottom: 8%;
+              
+              /* border: 3px solid rgb(83, 2, 83); */
+              border-radius: 1px 5% 5% 2%;
+            
+              transition: transform 1.5s;
+              /* padding-left: 1%; */
+              
+            
+            }
+            
+            /* .parent-cadre img{
+              max-width: 100%;
+              max-height: 100%;
+            
+             
+            } */
+            
+            .img-cadre {
+              box-shadow: 8px 8px 7px 2px #000000;
+              /* border: 3px solid blue; */
+            }
+            
+            /* .firstImg{
+            
+              border: 3px solid red;
+            } */
+            
+            .interieur{
+              
+              border: 3px solid violet;
+              max-width: 255px;
+              max-height:205px;
+            
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              /* z-index: 6; */
+            
+              position: relative;
+              left: 13%;
+              /* bottom: 70px; */
+              margin-top: -74%;
+              
+            
+            
+              
+            
+            /***** background****** */
+              /* background-image: url(img/pdiddy_jay_ect.png);
+               */background-position: center; 
+               background-size: cover;  
+             
+             
+               transition: transform 1.5s;
+            
+            }
+                 
+                  
+                      }
+
+
+
+
+
+
+
     
 
           @media screen and (max-width: 420px) {

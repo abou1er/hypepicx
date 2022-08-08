@@ -1,4 +1,5 @@
 
+ 
  <footer>
       <div class="conteneurFoot1">
           <div class="titreFoot"><h4>Mention légales</h4></div>
