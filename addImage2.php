@@ -284,17 +284,18 @@ if(isset($_POST['submitAnim'])){
                 </td>
                 
                 <td> <!------------------------------------------------value sera = a ce qui sera rentre dans l'input même si cT mauvais au rechargement submit sera tjr écrit dans linput $pseudo est la variable sécurisé de POST_$pseudo-------- --->
-                <input type="text"  placeholder="Entrer le titre de l'image" name="title_image" id='hardfood2' value="<?php if(isset($title_image)) {echo $title_image;}?>">
+                <input class="inpAddImg" type="text"  placeholder="Entrer le titre de l'image" name="title_image" id='hardfood2' value="<?php if(isset($title_image)) {echo $title_image;}?>">
                 </td>
 
                 <td> <!------------------------------------------------value sera = a ce qui sera rentre dans l'input même si cT mauvais au rechargement submit sera tjr écrit dans linput $pseudo est la variable sécurisé de POST_$pseudo-------- --->
-                <input type="text"  placeholder="URL de l'image" name="url_image" id='hardfood2' value="<?php if(isset($url_image)) {echo $url_image;}?>">
+                <input  class="inpAddImg" type="text"  placeholder="URL de l'image: img\nomDuFichier.gif" name="url_image" id='hardfood2' value="<?php if(isset($url_image)) {echo $url_image;}?>">
                 </td>
                </tr>
 
             </table>
 
-            <input type="submit" name="submit" value=" Ajouter l'image">
+            <button type="submit" name="submit" value=" Ajouter l'image">Ajouter l'image</button>
+             
             <!-- submit tjr dans le formulaire -->
 
     </form>
@@ -320,29 +321,29 @@ if(isset($_POST['submitAnim'])){
                 </td>
                 
                 <td> <!------------------------------------------------value sera = a ce qui sera rentre dans l'input même si cT mauvais au rechargement submit sera tjr écrit dans linput $pseudo est la variable sécurisé de POST_$pseudo-------- --->
-                <input type="text"  placeholder="Entrer le titre de l'image" name="title_image_LS" id='lifestyle' value="<?php if(isset($title_image_LS)) {echo $title_image_LS;}?>">
+                <input  class="inpAddImg" type="text"  placeholder="Entrer le titre de l'image" name="title_image_LS" id='lifestyle' value="<?php if(isset($title_image_LS)) {echo $title_image_LS;}?>">
                 </td>
 
                 <td> <!------------------------------------------------value sera = a ce qui sera rentre dans l'input même si cT mauvais au rechargement submit sera tjr écrit dans linput $pseudo est la variable sécurisé de POST_$pseudo-------- --->
-                <input type="text"  placeholder="URL de l'image" name="url_image_LS" id='lifestyle' value="<?php if(isset($url_image_LS)) {echo $url_image_LS;}?>">
+                <input  class="inpAddImg" type="text"  placeholder="URL de l'image: img\07-omelette.gif" name="url_image_LS" id='lifestyle' value="<?php if(isset($url_image_LS)) {echo $url_image_LS;}?>">
                 </td>
 
 
 
                 <!-- //input2 -->
                 <td> <!------------------------------------------------value sera = a ce qui sera rentre dans l'input même si cT mauvais au rechargement submit sera tjr écrit dans linput $pseudo est la variable sécurisé de POST_$pseudo-------- --->
-                <input type="text"  placeholder="Entrer le titre de l'image" name="title_image_LS2" id='lifestyle' value="<?php if(isset($title_image_LS2)) {echo $title_image_LS2;}?>">
+                <input  class="inpAddImg" type="text"  placeholder="Entrer le titre de l'image" name="title_image_LS2" id='lifestyle' value="<?php if(isset($title_image_LS2)) {echo $title_image_LS2;}?>">
                 </td>
 
                 <td> <!------------------------------------------------value sera = a ce qui sera rentre dans l'input même si cT mauvais au rechargement submit sera tjr écrit dans linput $pseudo est la variable sécurisé de POST_$pseudo-------- --->
-                <input type="text"  placeholder="URL de l'image" name="url_image_LS2" id='lifestyle' value="<?php if(isset($url_image_LS2)) {echo $url_image_LS2;}?>">
+                <input  class="inpAddImg" type="text"  placeholder="URL de l'image: img\07-omelette.gif" name="url_image_LS2" id='lifestyle' value="<?php if(isset($url_image_LS2)) {echo $url_image_LS2;}?>">
                 </td>
                </tr>
 
 
             </table>
 
-            <input type="submit" name="submit_LS" value=" Ajouter l'image">
+            <input   type="submit" name="submit_LS" value=" Ajouter l'image">
             <!-- submit tjr dans le formulaire -->
 
         </form>
@@ -363,17 +364,17 @@ if(isset($_POST['submitAnim'])){
                 </td>
                 
                 <td> <!------------------------------------------------value sera = a ce qui sera rentre dans l'input même si cT mauvais au rechargement submit sera tjr écrit dans linput $pseudo est la variable sécurisé de POST_$pseudo-------- --->
-                <input type="text"  placeholder="Entrer le titre de l'image" name="title_image_N" id='nature' value="<?php if(isset($title_image_N)) {echo $title_image_N;}?>">
+                <input  class="inpAddImg" type="text"  placeholder="Entrer le titre de l'image" name="title_image_N" id='nature' value="<?php if(isset($title_image_N)) {echo $title_image_N;}?>">
                 </td>
 
                 <td> <!------------------------------------------------value sera = a ce qui sera rentre dans l'input même si cT mauvais au rechargement submit sera tjr écrit dans linput $pseudo est la variable sécurisé de POST_$pseudo-------- --->
-                <input type="text"  placeholder="URL de l'image" name="url_image_N" id='nature' value="<?php if(isset($url_image_N)) {echo $url_image_N;}?>">
+                <input class="inpAddImg"  type="text"  placeholder="URL de l'image: img\07-omelette.gif" name="url_image_N" id='nature' value="<?php if(isset($url_image_N)) {echo $url_image_N;}?>">
                 </td>
                </tr>
 
             </table>
 
-            <input type="submit" name="submitN" value=" Ajouter l'image">
+            <input  type="submit" name="submitN" value=" Ajouter l'image">
             <!-- submit tjr dans le formulaire -->
 
         </form>
@@ -395,11 +396,11 @@ if(isset($_POST['submitAnim'])){
                 </td>
                 
                 <td> <!------------------------------------------------value sera = a ce qui sera rentre dans l'input même si cT mauvais au rechargement submit sera tjr écrit dans linput $pseudo est la variable sécurisé de POST_$pseudo-------- --->
-                <input type="text"  placeholder="Entrer le titre de l'image" name="title_image_NFT" id='nature' value="<?php if(isset($title_image_NFT)) {echo $title_image_NFT;}?>">
+                <input class="inpAddImg"  type="text"  placeholder="Entrer le titre de l'image" name="title_image_NFT" id='nature' value="<?php if(isset($title_image_NFT)) {echo $title_image_NFT;}?>">
                 </td>
 
                 <td> <!------------------------------------------------value sera = a ce qui sera rentre dans l'input même si cT mauvais au rechargement submit sera tjr écrit dans linput $pseudo est la variable sécurisé de POST_$pseudo-------- --->
-                <input type="text"  placeholder="URL de l'image" name="url_image_NFT" id='nature' value="<?php if(isset($url_image_NFT)) {echo $url_image_NFT;}?>">
+                <input class="inpAddImg"  type="text"  placeholder="URL de l'image: img\07-omelette.gif" name="url_image_NFT" id='nature' value="<?php if(isset($url_image_NFT)) {echo $url_image_NFT;}?>">
                 </td>
                </tr>
 
@@ -426,11 +427,11 @@ if(isset($_POST['submitAnim'])){
                 </td>
                 
                 <td> <!------------------------------------------------value sera = a ce qui sera rentre dans l'input même si cT mauvais au rechargement submit sera tjr écrit dans linput $pseudo est la variable sécurisé de POST_$pseudo-------- --->
-                <input type="text"  placeholder="Entrer le titre de l'image" name="title_image_Anim" id='nature' value="<?php if(isset($title_image_Anim)) {echo $title_image_Anim;}?>">
+                <input class="inpAddImg"  type="text"  placeholder="Entrer le titre de l'image" name="title_image_Anim" id='nature' value="<?php if(isset($title_image_Anim)) {echo $title_image_Anim;}?>">
                 </td>
 
                 <td> <!------------------------------------------------value sera = a ce qui sera rentre dans l'input même si cT mauvais au rechargement submit sera tjr écrit dans linput $pseudo est la variable sécurisé de POST_$pseudo-------- --->
-                <input type="text"  placeholder="URL de l'image" name="url_image_Anim" id='nature' value="<?php if(isset($url_image_Anim)) {echo $url_image_Anim;}?>">
+                <input class="inpAddImg"  type="text"  placeholder="URL de l'image: img\07-omelette.gif" name="url_image_Anim" id='nature' value="<?php if(isset($url_image_Anim)) {echo $url_image_Anim;}?>">
                 </td>
                </tr>
 

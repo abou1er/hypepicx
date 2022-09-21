@@ -9,6 +9,10 @@ form{
 input{
     border-radius: 25px;
 }
+.inpAddImg{
+    width: 300px;
+    
+}
 
 .retour{
     background-color: rgb(37, 31, 22);
